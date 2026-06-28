@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 一般討論 Discussions
+    url: https://github.com/
+    about: 想法交流、提問與一般討論請至 Discussions。
+  - name: 🔐 安全性問題 Security
+    url: https://github.com/
+    about: 安全性弱點請勿公開，請依 SECURITY.md 私下回報。

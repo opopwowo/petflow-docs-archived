@@ -1,0 +1,27 @@
+# 自動偵測文字檔並正規化行尾為 LF
+* text=auto eol=lf
+
+# 明確指定文字檔
+*.md       text eol=lf
+*.markdown text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf
+*.json     text eol=lf
+*.txt      text eol=lf
+*.editorconfig text eol=lf
+LICENSE    text eol=lf
+
+# 二進位檔（不做行尾轉換）
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.svg  text
+*.pdf  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+
+# GitHub Linguist：將文件目錄標記為文件，統計更準確
+docs/** linguist-documentation
+*.md    linguist-detectable=true

@@ -1,0 +1,44 @@
+title: "[Idea] "
+labels: ["discussion", "idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        歡迎在此分享關於 PetFlow Enterprise 文件 / 產品方向的想法。
+        若是明確的文件錯誤或功能提案，請改用 Issue。
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景 / 動機
+      description: 你為什麼提出這個想法？想解決什麼？
+      placeholder: 請描述背景與痛點…
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 想法內容
+      description: 具體說明你的構想
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 相關領域
+      options:
+        - 產品 / 商業
+        - 需求 / 流程
+        - 系統架構 / 資料庫 / API
+        - UI/UX
+        - 功能模組
+        - SaaS / 平台
+        - AI
+        - 安全 / 部署 / 測試
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補充
+      description: 參考連結、替代方案等（選填）

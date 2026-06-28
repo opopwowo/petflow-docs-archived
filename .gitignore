@@ -1,0 +1,44 @@
+# ── MkDocs 產出 ─────────────────────────────
+/site/
+.cache/
+
+# ── Python（mkdocs 環境）────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.python-version
+
+# ── Node（若日後加入文件工具）────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── 編輯器 / IDE ────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── 作業系統 ────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ── 暫存 / 草稿 ─────────────────────────────
+*.tmp
+*.bak
+*.log
+/tmp/
+/draft/
+
+# ── 機密（文件專案不應出現，仍預防）───────────
+*.env
+.env*
+*.pem
+*.key
+secrets.*

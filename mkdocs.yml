@@ -1,0 +1,116 @@
+site_name: PetFlow Enterprise 官方文件
+site_description: 寵物事業一站式 SaaS 管理平台 — 官方產品文件（PRD / BRD / 架構 / 設計）
+site_author: PetFlow Enterprise Team
+copyright: Copyright &copy; PetFlow Enterprise
+
+# 文件語言：繁體中文
+theme:
+  name: material
+  language: zh-Hant
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: 切換深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: 切換淺色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/
+
+# docs_dir 預設為 docs/，故以下路徑皆相對於 docs/。
+# 根目錄的 README.md / CLAUDE.md / SUMMARY.md 為 GitHub 用，網站首頁見 docs/index.md。
+nav:
+  - 首頁: index.md
+  - 商業:
+      - 產品願景: 01_產品願景/README.md
+      - 市場分析: 02_市場分析/README.md
+      - 商業模式: 03_商業模式/README.md
+  - 需求:
+      - 需求分析: 04_需求分析/README.md
+      - 使用者角色: 05_使用者角色/README.md
+      - User Story: 06_User_Story/README.md
+      - Use Case: 07_Use_Case/README.md
+      - 流程圖: 08_流程圖/README.md
+  - 設計:
+      - 系統架構: 09_系統架構/README.md
+      - 資料庫設計: 10_資料庫設計/README.md
+      - API 設計: 11_API設計/README.md
+      - UIUX 設計: 12_UIUX設計/README.md
+  - 功能模組:
+      - 寵物管理: 13_寵物管理/README.md
+      - 飼主管理: 14_飼主管理/README.md
+      - 健康管理: 15_健康管理/README.md
+      - 配種管理: 16_配種管理/README.md
+      - 官方登記助手: 17_官方登記助手/README.md
+      - 照片管理: 18_照片管理/README.md
+  - 商業化:
+      - 會員訂閱: 19_會員訂閱/README.md
+      - 付款系統: 20_付款系統/README.md
+  - 平台:
+      - SaaS: 21_SaaS/README.md
+      - Multi-Tenant: 22_MultiTenant/README.md
+      - 多店管理: 23_多店管理/README.md
+      - RBAC: 24_RBAC/README.md
+      - Audit Log: 25_AuditLog/README.md
+      - 通知中心: 26_通知中心/README.md
+      - AI: 27_AI/README.md
+  - 維運:
+      - 安全性: 28_安全性/README.md
+      - 部署: 29_部署/README.md
+      - 測試: 30_測試/README.md
+  - 規劃:
+      - Roadmap: 31_Roadmap/README.md
+      - 版本紀錄: 32_版本紀錄/README.md
