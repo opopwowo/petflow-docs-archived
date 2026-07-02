@@ -1,6 +1,6 @@
-# PetFlow Enterprise 官方文件
+# PetFlow Enterprise（晴寵）官方文件
 
-> 寵物事業一站式 SaaS 管理平台 · 唯一事實來源（Single Source of Truth）
+> AI智慧寵物管理平台 — 陪伴每一隻毛孩的一生 · 唯一事實來源（Single Source of Truth）
 
 歡迎來到 **PetFlow Enterprise** 的官方產品文件網站。本網站集中所有產品規格與設計文件，未來所有 AI 工具（Claude Code、Cursor、ChatGPT、Gemini）與工程師都必須依照這些文件開發。
 
@@ -9,7 +9,7 @@
 
 ## 系統定位
 
-PetFlow Enterprise 是面向 **寵物店、繁殖場、寵物服務業者與飼主** 的 **多租戶 SaaS 平台**，將寵物生命週期管理（飼養、健康、配種、官方登記、照片紀錄）數位化、自動化、合規化。
+PetFlow Enterprise（中文品牌名：**晴寵**）是面向 **寵物店、繁殖場、寵物服務業者與飼主** 的 **多租戶 SaaS 平台**，將寵物生命週期管理（飼養、健康、配種、官方登記、照片紀錄）數位化、自動化、合規化。
 
 - **商業模式**：B2B SaaS 訂閱制 + 加值服務
 - **技術定位**：Cloudflare Native · API First · Mobile First · AI Enhanced
