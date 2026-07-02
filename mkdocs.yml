@@ -90,7 +90,9 @@ nav:
       - API 設計: 11_API設計/README.md
       - UIUX 設計: 12_UIUX設計/README.md
   - 功能模組:
-      - 寵物管理: 13_寵物管理/README.md
+      - 寵物管理:
+          - 13_寵物管理/README.md
+          - 晶片表: 13_寵物管理/晶片表.md
       - 飼主管理: 14_飼主管理/README.md
       - 健康管理: 15_健康管理/README.md
       - 配種管理: 16_配種管理/README.md
