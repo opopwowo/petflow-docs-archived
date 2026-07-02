@@ -13,12 +13,12 @@
 - 繪製 Use Case Diagram
 - 對應 Use Case 至 API 與流程圖
 
-## 待完成文件
+## 文件清單
 
-- [ ] Use Case Diagram（總覽）
-- [ ] 各模組 Use Case 規格書
-- [ ] 前置 / 後置條件清單
-- [ ] 例外與錯誤情境彙整
+- [x] [01_Use_Case圖總覽](01_Use_Case圖總覽.md)：系統邊界、參與者定義與各模組 Use Case Diagram（mermaid）。
+- [x] [02_各模組Use_Case規格書](02_各模組Use_Case規格書.md)：全模組 UC 規格（UC-代碼-NNN），含主要／替代／例外流程與關聯 US/FR 編號。
+- [x] [03_前置後置條件清單](03_前置後置條件清單.md)：標準化前置條件代碼（PRE-*）與各 UC 前置／後置條件對照表。
+- [x] [04_例外與錯誤情境彙整](04_例外與錯誤情境彙整.md)：統一例外目錄（EXC-01～08）、錯誤回應格式、HTTP 狀態碼與訊息原則。
 
 ## 後續章節
 
@@ -33,4 +33,4 @@
 
 ---
 
-> 本文件屬於 PetFlow Enterprise 官方文件。撰寫前請先閱讀根目錄 `CLAUDE.md`。狀態：草稿（Draft）。
+> 本文件屬於 PetFlow Enterprise 官方文件。撰寫前請先閱讀根目錄 `CLAUDE.md`。狀態：初稿完成（v0.2.0）。

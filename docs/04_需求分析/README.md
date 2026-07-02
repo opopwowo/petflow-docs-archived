@@ -13,13 +13,13 @@
 - 以 MoSCoW 排定功能優先序
 - 定義非功能需求（效能、安全、可用性、合規）
 
-## 待完成文件
+## 文件清單
 
-- [ ] BRD（Business Requirement Document）
-- [ ] PRD（Product Requirement Document）
-- [ ] 功能需求清單（含 MoSCoW 標記）
-- [ ] 非功能性需求（NFR）
-- [ ] 需求追溯矩陣（Requirement Traceability Matrix）
+- [x] [01_商業需求文件BRD](01_商業需求文件BRD.md)：商業目標（BG-NNN）、範圍、利害關係人、限制/假設/風險與商業驗收標準。
+- [x] [02_產品需求文件PRD](02_產品需求文件PRD.md)：產品範圍分期（P0/P1/P2）、各模組需求概述與驗收標準、關鍵使用者流程與發佈標準。
+- [x] [03_功能需求清單](03_功能需求清單.md)：全模組功能需求逐條清單（FR-代碼-NNN），含優先級與 MoSCoW 標記。
+- [x] [04_非功能性需求NFR](04_非功能性需求NFR.md)：品質屬性基準（NFR-NNN），涵蓋效能、可用性、安全、合規、使用性、可維護性與 Edge 限制。
+- [x] [05_需求追溯矩陣](05_需求追溯矩陣.md)：BG ↔ FR/NFR ↔ 模組資料夾 ↔ 未來 US/UC 編號的雙向追溯對照與覆蓋檢核。
 
 ## 後續章節
 
@@ -34,4 +34,4 @@
 
 ---
 
-> 本文件屬於 PetFlow Enterprise 官方文件。撰寫前請先閱讀根目錄 `CLAUDE.md`。狀態：草稿（Draft）。
+> 本文件屬於 PetFlow Enterprise 官方文件。撰寫前請先閱讀根目錄 `CLAUDE.md`。狀態：初稿完成（v0.2.0）。
