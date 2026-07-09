@@ -86,7 +86,9 @@ nav:
       - 流程圖: 08_流程圖/README.md
   - 設計:
       - 系統架構: 09_系統架構/README.md
-      - 資料庫設計: 10_資料庫設計/README.md
+      - 資料庫設計:
+          - 10_資料庫設計/README.md
+          - 掛籠資訊表 Schema: 10_資料庫設計/掛籠資訊表-Schema.md
       - API 設計:
           - 11_API設計/README.md
           - 掛籠資訊表 API: 11_API設計/掛籠資訊表-API.md

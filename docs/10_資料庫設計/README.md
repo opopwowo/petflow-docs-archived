@@ -13,6 +13,10 @@
 - 落實多租戶（tenant_id）、軟刪除（deleted_at）、稽核欄位
 - 規範 Migration 的 Up/Down 與向後相容
 
+## 模組 Schema 文件
+
+- [掛籠資訊表 資料庫設計 Cage Card Schema](掛籠資訊表-Schema.md)：D1 資料表、索引與 Migration（Up/Down）
+
 ## 待完成文件
 
 - [ ] ER 圖（Entity Relationship Diagram）
