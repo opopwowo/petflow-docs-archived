@@ -13,6 +13,10 @@
 - 規範響應式版面（Mobile First）與深色模式
 - 確保無障礙（WCAG 2.1 AA）
 
+## 模組 UI 文件
+
+- [掛籠資訊表 UI 設計 Cage Card UI](掛籠資訊表-UI.md)：畫面、列印樣板與 Design Token 套用
+
 ## 待完成文件
 
 - [ ] 設計原則與品牌視覺

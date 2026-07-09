@@ -13,6 +13,10 @@
 - 繪製 Use Case Diagram
 - 對應 Use Case 至 API 與流程圖
 
+## 模組 Use Case 文件
+
+- [掛籠資訊表 Use Case Cage Card Use Cases](掛籠資訊表-UseCase.md)：建立 / 發布 / 列印 / 公開頁 / 自動下架
+
 ## 待完成文件
 
 - [ ] Use Case Diagram（總覽）
