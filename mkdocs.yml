@@ -87,7 +87,9 @@ nav:
   - 設計:
       - 系統架構: 09_系統架構/README.md
       - 資料庫設計: 10_資料庫設計/README.md
-      - API 設計: 11_API設計/README.md
+      - API 設計:
+          - 11_API設計/README.md
+          - 掛籠資訊表 API: 11_API設計/掛籠資訊表-API.md
       - UIUX 設計: 12_UIUX設計/README.md
   - 功能模組:
       - 寵物管理:

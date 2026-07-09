@@ -26,6 +26,7 @@
 - [09 系統架構](docs/09_系統架構/README.md)
 - [10 資料庫設計](docs/10_資料庫設計/README.md)
 - [11 API 設計](docs/11_API設計/README.md)
+  - [掛籠資訊表 API 合約](docs/11_API設計/掛籠資訊表-API.md)
 - [12 UIUX 設計](docs/12_UIUX設計/README.md)
 
 ## 功能模組
