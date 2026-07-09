@@ -13,6 +13,8 @@
 - 新增「掛籠資訊表 Cage Card」規格文件（`docs/13_寵物管理/掛籠資訊表.md`）：欄位定義、狀態機、API 草案、列印與 QR Code 公開頁、法遵與非功能需求。
 - 新增「掛籠資訊表 API 合約」（`docs/11_API設計/掛籠資訊表-API.md`）：OpenAPI 3.1 合約草案，含端點、schema、錯誤碼與狀態碼約定。
 - 新增「掛籠資訊表 資料庫設計」（`docs/10_資料庫設計/掛籠資訊表-Schema.md`）：D1 資料表、索引、部分唯一索引與 Migration（Up/Down）。
+- 新增「掛籠資訊表 UI 設計」（`docs/12_UIUX設計/掛籠資訊表-UI.md`）：編輯畫面、列印樣板（A5/A6）與 Design Token 套用。
+- 新增「掛籠資訊表 Use Case」（`docs/07_Use_Case/掛籠資訊表-UseCase.md`）：建立 / 發布 / 列印 / QR 公開頁 / 售出自動下架五案例。
 - 規劃中的文件項目見各模組 `README.md` 的「待完成文件」章節。
 
 ---

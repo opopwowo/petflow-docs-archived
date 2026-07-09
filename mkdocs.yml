@@ -82,7 +82,9 @@ nav:
       - 需求分析: 04_需求分析/README.md
       - 使用者角色: 05_使用者角色/README.md
       - User Story: 06_User_Story/README.md
-      - Use Case: 07_Use_Case/README.md
+      - Use Case:
+          - 07_Use_Case/README.md
+          - 掛籠資訊表 Use Case: 07_Use_Case/掛籠資訊表-UseCase.md
       - 流程圖: 08_流程圖/README.md
   - 設計:
       - 系統架構: 09_系統架構/README.md
@@ -92,7 +94,9 @@ nav:
       - API 設計:
           - 11_API設計/README.md
           - 掛籠資訊表 API: 11_API設計/掛籠資訊表-API.md
-      - UIUX 設計: 12_UIUX設計/README.md
+      - UIUX 設計:
+          - 12_UIUX設計/README.md
+          - 掛籠資訊表 UI: 12_UIUX設計/掛籠資訊表-UI.md
   - 功能模組:
       - 寵物管理:
           - 13_寵物管理/README.md
