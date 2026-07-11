@@ -1,0 +1,6 @@
+# 真實個資（晶片號、證號、貓舍名、寵物清冊）一律不進版控
+pets.json
+licenses.json
+*.xlsx
+*.docx
+名下寵物清冊*
