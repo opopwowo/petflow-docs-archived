@@ -99,6 +99,18 @@ def _text(cell, text, *, size, bold, align, color):
     r._element.get_or_add_rPr().rFonts.set(qn('w:eastAsia'), 'Microsoft JhengHei')
 
 
+def _shrink_para(p):
+    """把儲存格內多餘的空白段落壓到最小高度，避免撐高外層列。"""
+    p.paragraph_format.space_before = Pt(0)
+    p.paragraph_format.space_after = Pt(0)
+    pPr = p._p.get_or_add_pPr()
+    sp = OxmlElement('w:spacing')
+    sp.set(qn('w:before'), '0'); sp.set(qn('w:after'), '0')
+    sp.set(qn('w:line'), '20'); sp.set(qn('w:lineRule'), 'exact')  # ~1pt 行高
+    pPr.append(sp)
+    r = p.add_run(); r.font.size = Pt(1)
+
+
 def build_card(cell, pet, licenses):
     station = pet.get("station", "")
     vals = [
@@ -120,6 +132,8 @@ def build_card(cell, pet, licenses):
     footer = t.cell(len(FIELDS) + 1, 0).merge(t.cell(len(FIELDS) + 1, 1)); _shade(footer, BG)
     _rowh(t.rows[len(FIELDS) + 1], FOOTER_H)
     _img(footer, os.path.join(ASSETS, "footer.png"), CARD_W, FOOTER_H)
+    # 壓掉儲存格內建於卡片表格前的空白段落（會撐高外層列，導致每頁只排 4 張）
+    _shrink_para(cell.paragraphs[0])
 
 
 def build(pets, licenses, out_path):
@@ -139,7 +153,7 @@ def build(pets, licenses, out_path):
         outer.alignment = WD_TABLE_ALIGNMENT.CENTER
         _borders(outer, "", 0, style='none'); _margins(outer, 0, 60)
         for r in outer.rows:
-            _rowh(r, 80.5, exact=False)
+            _rowh(r, 81.0, exact=True)   # 固定列高，確保每頁 3 列 = 6 張
         for j, pet in enumerate(group):
             oc = outer.cell(j // COLS, j % COLS); _cellw(oc, CARD_W + 2)
             build_card(oc, pet, licenses)
