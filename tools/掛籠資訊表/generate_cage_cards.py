@@ -53,8 +53,11 @@ def _rowh(row, mm, exact=True):
 
 
 def _cellw(cell, mm):
+    tcPr = cell._tc.get_or_add_tcPr()
+    for old in tcPr.findall(qn('w:tcW')):   # 移除既有，避免重複節點
+        tcPr.remove(old)
     w = OxmlElement('w:tcW'); w.set(qn('w:w'), str(int(mm * 56.7))); w.set(qn('w:type'), 'dxa')
-    cell._tc.get_or_add_tcPr().append(w)
+    tcPr.insert(0, w)
 
 
 def _shade(cell, hexc):
@@ -120,7 +123,7 @@ def build_card(cell, pet, licenses):
         fmt_chip(pet.get("dam_chip", "")),
     ]
     t = cell.add_table(rows=len(FIELDS) + 2, cols=2)
-    _borders(t, BORDER, 4); _margins(t)
+    t.autofit = False; t.allow_autofit = False
     banner = t.cell(0, 0).merge(t.cell(0, 1)); _shade(banner, BG)
     _rowh(t.rows[0], BANNER_H); _img(banner, os.path.join(ASSETS, "banner.png"), CARD_W, BANNER_H)
     for i, (f, v) in enumerate(zip(FIELDS, vals), start=1):
@@ -147,16 +150,21 @@ def build(pets, licenses, out_path):
     st.paragraph_format.space_after = Pt(0); st.paragraph_format.line_spacing = 1.0
 
     per = COLS * ROWS
+    cell_w = CARD_W
     for gi in range(0, len(pets), per):
         group = pets[gi:gi + per]
-        outer = doc.add_table(rows=ROWS, cols=COLS)
+        rows_needed = (len(group) + COLS - 1) // COLS   # 最後一頁只建需要的列數
+        outer = doc.add_table(rows=rows_needed, cols=COLS)
         outer.alignment = WD_TABLE_ALIGNMENT.CENTER
+        outer.autofit = False; outer.allow_autofit = False
         _borders(outer, "", 0, style='none'); _margins(outer, 0, 60)
         for r in outer.rows:
-            _rowh(r, 81.0, exact=True)   # 固定列高，確保每頁 3 列 = 6 張
+            _rowh(r, 81.0, exact=True)                  # 固定列高，每頁 3 列 = 6 張
+        for row in outer.rows:                          # 所有儲存格都給固定寬（含空格）
+            for c in row.cells:
+                _cellw(c, cell_w)
         for j, pet in enumerate(group):
-            oc = outer.cell(j // COLS, j % COLS); _cellw(oc, CARD_W + 2)
-            build_card(oc, pet, licenses)
+            build_card(outer.cell(j // COLS, j % COLS), pet, licenses)
         if gi + per < len(pets):
             doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
     doc.save(out_path)
